@@ -1,0 +1,26 @@
+[project]
+name = "v2ppt"
+version = "0.1.0"
+description = "Video to PowerPoint Converter - Extract PPT slides from video files"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.8.0",
+    "python-pptx>=0.6.21",
+    "pillow>=10.0.0",
+    "numpy>=1.24.0"
+]
+
+[project.optional-dependencies]
+build = [
+    "pyinstaller>=5.0.0",
+    "auto-py-to-exe>=2.0.0",
+]
+
+[project.scripts]
+v2ppt = "main:main"
+
+[dependency-groups]
+build = [
+    "pyinstaller>=6.16.0",
+]
